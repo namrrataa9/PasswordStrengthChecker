@@ -55,7 +55,7 @@ if (password.trim() === "") {
       const breached = text.toUpperCase().includes(suffix);
 
     const lines = text.split("\n");
-let breachCount = 0;
+    let breachCount = 0;
 
 for (const line of lines) {
   const [hashSuffix, count] = line.trim().split(":");
@@ -136,4 +136,33 @@ themeToggle.addEventListener("click", () => {
     themeToggle.classList.add("btn-light");
   }
 });
+function updatePlaceholderColor() {
+  const input = passwordInput;
+  const isLight = body.classList.contains("light-theme");
+
+  // Remove any previous style tag
+  const existingStyle = document.getElementById("placeholder-style");
+  if (existingStyle) existingStyle.remove();
+
+  const style = document.createElement("style");
+  style.id = "placeholder-style";
+  style.textContent = `
+    #password::placeholder {
+      color: ${isLight ? "#212529" : "#ffffff"};
+      opacity: 0.7;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// Run it once on page load
+updatePlaceholderColor();
+
+// Also update when the theme is toggled
+themeToggle.addEventListener("click", () => {
+  // ... existing toggle code ...
+
+  updatePlaceholderColor(); // 🔄 update placeholder color
+});
+
 
