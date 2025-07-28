@@ -1,0 +1,55 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Default dark theme is already applied */
+.light-theme {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+.light-theme .card {
+  background: #ffffff !important;
+  color: #212529 !important;
+}
+
+.light-theme .form-control,
+.light-theme .form-label,
+.light-theme .btn,
+.light-theme .list-group-item {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.light-theme .progress {
+  background-color: #e9ecef;
+}
+
+.card {
+  background: linear-gradient(to right, #232526, #414345);
+  color: white;
+  border: none;
+}
+
+input.form-control {
+  background-color: #2e2e2e;
+  color: white;
+  border: 1px solid #555;
+}
+
+input.form-control:focus {
+  background-color: #2e2e2e;
+  color: white;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+.progress-bar {
+  transition: width 0.4s ease;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 0.9rem;
+}
