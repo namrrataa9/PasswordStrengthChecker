@@ -1,114 +1,86 @@
 body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Dark blue-grey gradient */
+  color: #fff; /* Makes text readable */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* Default dark theme is already applied */
-.light-theme {
-  background-color: #f8f9fa !important;
-  color: #212529 !important;
-}
-.btn-download {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 20px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.btn-download:hover {
-  background-color: #388e3c;
-}
-/* Default (Light Mode) */
-input::placeholder {
-  color: #333; /* Dark placeholder for light mode */
-  transition: color 0.3s ease;
-}
-#togglePassword {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
-/* Dark Mode */
-body.dark-mode input::placeholder {
-  color: #ddd; /* Light placeholder for dark mode */
+body.light-theme {
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
-.container {
-  max-width: 500px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 600px) {
-  .container {
-    margin: 20px;
-    padding: 20px;
-  }
-
-  input[type="password"], button[type="submit"] {
-    font-size: 14px;
-  }
-}
-
-input[type="password"] {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-.light-theme .card {
-  background: #ffffff !important;
-  color: #212529 !important;
-}
-
-.light-theme .form-control,
-.light-theme .form-label,
-.light-theme .btn,
-.light-theme .list-group-item {
+body.light-theme .card {
   background-color: #ffffff;
   color: #212529;
 }
 
-.light-theme .progress {
-  background-color: #e9ecef;
+.light-theme .btn-light {
+  background-color: #212529;
+  color: #fff;
 }
 
-.card {
-  background: linear-gradient(to right, #232526, #414345);
-  color: white;
-  border: none;
+.light-theme .btn-dark {
+  background-color: #f8f9fa;
+  color: #000;
 }
 
-input.form-control {
-  background-color: #2e2e2e;
-  color: white;
-  border: 1px solid #555;
+/*HackerImageStyling*/
+
+#hackerContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
-input.form-control:focus {
-  background-color: #2e2e2e;
-  color: white;
-  border-color: #66afe9;
-  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+#hackerImg {
+  height: 120px;
+  width: auto
+
 }
 
-.progress-bar {
-  transition: width 0.4s ease;
+#typingText {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #00ff00;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid #00ff00;
+  animation: typing 2s steps(30, end), blink 0.7s step-end infinite;
 }
 
-.list-group-item {
-  background-color: transparent;
-  border: none;
-  color: #ccc;
-  font-size: 0.9rem;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25ch;
+  }
 }
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+#strengthBar {
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+  border-radius: 5px;
+
+  /* ✨ Gradient Background */
+  background: linear-gradient(90deg, #ff4e50, #f9d423, #00b09b, #96c93d); /* red to yellow */
+}
+
+
+
+
+
+
+
