@@ -151,11 +151,11 @@ body {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const typingText = document.getElementById("typingText");
-  const message = "- Secure your Password with\nPassword Strength Checker..";
+  const message = "- Secure your Password with<br>this Password Strength Checker..";
   let i = 0;
   function typeWriter() {
     if (i < message.length) {
-      typingText.textContent += message.charAt(i);
+      typingText.innerHTML += message.charAt(i);
       i++;
       setTimeout(typeWriter, 60);
     }
